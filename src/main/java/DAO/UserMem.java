@@ -34,7 +34,7 @@ public class UserMem implements IUser {
         try {
             Collections.sort(listOfUsers);
         } catch (Exception e) {
-            System.out.println(e.fillInStackTrace());
+
         }
         return listOfUsers;
     }
@@ -46,6 +46,7 @@ public class UserMem implements IUser {
 
     @Override
     public User getUserByName(String name) {
+//        listOfUsers.stream();
 //        return listOfUsers.stream()
 //                filter(x -> x.getN);
         return null;
