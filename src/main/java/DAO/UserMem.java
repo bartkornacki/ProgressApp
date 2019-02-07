@@ -17,12 +17,14 @@ public class UserMem implements IUser {
 
     @Override
     public boolean removeUser(int id) {
-        return false;
+        listOfUsers.remove(getUserById(id));
+        return true;
     }
 
     @Override
     public boolean editUser(int id, User user) {
-        return false;
+        listOfUsers.remove(id);
+        return listOfUsers.add(user);
     }
 
     @Override
@@ -37,6 +39,8 @@ public class UserMem implements IUser {
 
     @Override
     public User getUserByName(String name) {
-        return listOfUsers.get();
+//        return listOfUsers.stream()
+//                filter(x -> x.getN);
+        return null;
     }
 }
