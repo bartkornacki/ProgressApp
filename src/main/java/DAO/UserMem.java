@@ -3,6 +3,7 @@ package DAO;
 import Model.User;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class  UserMem implements IUser {
@@ -21,6 +22,7 @@ public class  UserMem implements IUser {
         return true;
     }
 
+    // to be modified
     @Override
     public boolean editUser(int id, User user) {
         listOfUsers.remove(id);
@@ -29,6 +31,11 @@ public class  UserMem implements IUser {
 
     @Override
     public List<User> getAllUsers() {
+        try{
+            Collections.sort(listOfUsers);
+        } catch  (Exception e){
+            System.out.println(e.fillInStackTrace());
+        }
         return listOfUsers;
     }
 
