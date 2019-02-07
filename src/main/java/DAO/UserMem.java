@@ -19,8 +19,7 @@ public class UserMem implements IUser {
 
     @Override
     public boolean removeUser(int id) {
-        listOfUsers.remove(getUserById(id));
-        return true;
+        return listOfUsers.remove(getUserById(id));
     }
 
     // to be modified
