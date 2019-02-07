@@ -5,7 +5,7 @@ import Model.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserMem implements IUser {
+public class  UserMem implements IUser {
 
     private List<User> listOfUsers = new ArrayList<>();
 
