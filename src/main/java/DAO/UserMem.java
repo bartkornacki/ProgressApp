@@ -8,11 +8,11 @@ import java.util.List;
 public class UserMem implements IUser {
 
     private List<User> listOfUsers = new ArrayList<>();
-    
+
 
     @Override
     public boolean addUser(User user) {
-        return false;
+        return listOfUsers.add(user);
     }
 
     @Override
@@ -27,16 +27,16 @@ public class UserMem implements IUser {
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return listOfUsers;
     }
 
     @Override
     public User getUserById(int id) {
-        return null;
+        return listOfUsers.get(id);
     }
 
     @Override
     public User getUserByName(String name) {
-        return null;
+        return listOfUsers.get();
     }
 }
