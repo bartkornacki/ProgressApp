@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class  UserMem implements IUser {
+public class UserMem implements IUser {
 
     private List<User> listOfUsers = new ArrayList<>();
 
@@ -31,9 +31,9 @@ public class  UserMem implements IUser {
 
     @Override
     public List<User> getAllUsers() {
-        try{
+        try {
             Collections.sort(listOfUsers);
-        } catch  (Exception e){
+        } catch (Exception e) {
             System.out.println(e.fillInStackTrace());
         }
         return listOfUsers;
