@@ -5,6 +5,7 @@ import Model.User;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class UserMem implements IUser {
 
@@ -45,10 +46,9 @@ public class UserMem implements IUser {
     }
 
     @Override
-    public User getUserByName(String name) {
-//        listOfUsers.stream();
-//        return listOfUsers.stream()
-//                filter(x -> x.getN);
-        return null;
+    public List<User> getUserByName(String name) {
+        return listOfUsers.stream().
+                filter(x -> x.getName().contains(name))
+                .collect(Collectors.toList());
     }
 }

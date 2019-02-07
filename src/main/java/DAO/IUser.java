@@ -17,6 +17,6 @@ public interface IUser {
 
     User getUserById(int id);
 
-    User getUserByName(String name);
+    List<User> getUserByName(String name);
 
 }
