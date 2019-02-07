@@ -1,6 +1,8 @@
 package Model;
 
-public class User {
+import java.util.Objects;
+
+public class User implements Comparable {
     private int id;
     private String user; //połaczenie name + sureName
     private String name;
@@ -64,5 +66,29 @@ public class User {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user1 = (User) o;
+        return id == user1.id &&
+                Objects.equals(user, user1.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, user);
+    }
+
+//    @Override
+//    public int compareTo(User o) {
+//        return this.name.compareToIgnoreCase(o.name);
+//    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
