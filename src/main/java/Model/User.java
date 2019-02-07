@@ -1,26 +1,27 @@
 package Model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class User implements Comparable {
     private int id;
     private String user; //połaczenie name + sureName
     private String name;
-    private String sureName;
+    private String surname;
     private String mail;
     private String number;
 
 
-    public User(int id, String user, String name, String sureName, String mail, String number) {
+    public User(int id, String user, String name, String surname, String mail, String number) {
         this.id = id;
         this.user = user;
         this.name = name;
-        this.sureName = sureName;
+        this.surname = surname;
         this.mail = mail;
         this.number = number;
     }
 
-    public String getUser() {
+    public String getUser(List<User> userByName) {
         return user;
     }
 
@@ -28,12 +29,12 @@ public class User implements Comparable {
         this.user = user;
     }
 
-    public String getSureName() {
-        return sureName;
+    public String getSurname() {
+        return surname;
     }
 
     public void setSureName(String sureName) {
-        this.sureName = sureName;
+        this.surname = sureName;
     }
 
     public int getId() {
