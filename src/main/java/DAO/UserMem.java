@@ -46,8 +46,8 @@ public class UserMem implements IUser {
 
     @Override
     public List<User> getUserByName(String name) {
-        return listOfUsers.stream().
-                filter(x -> x.getName().contains(name))
+        return listOfUsers.stream()
+                .filter(x -> x.getName().contains(name))
                 .collect(Collectors.toList());
     }
 }

@@ -2,17 +2,19 @@ package DAO;
 
 import Model.TrainingDay;
 import Model.User;
+import Model.PresenceList;
+
 
 import java.util.List;
 
 public interface IPresenceList {
 
 
-    List<User> checkPresenceByUser(String name);
+    List<PresenceList> checkPresenceByUser(String name);
 
-    List<User> checkPresenceByUser(User user);
+    List<PresenceList> checkPresenceByUser(User user);
 
-    List<User> checkPresenceByTrainingDay(TrainingDay trainingDay);
+    List<PresenceList> checkPresenceByTrainingDay(TrainingDay trainingDay);
 
     boolean checkPresenceByAll();
 
